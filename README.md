@@ -14,7 +14,7 @@ Consider the continuity equation in a 2D.
 
 <div align="center">
 
-  <img src="pics/others/domain.png" width="220" height="200">
+  <img src="pics/others/domain.png" width="300" height="270">
 
   <em>Figure 1. Domain.</em>
 
@@ -85,7 +85,7 @@ $$
 
 <div align="center">
 
-  <img src="pics/others/mass.png" width="200" height="200">
+  <img src="pics/others/mass.png" width="300" height="300">
 
   <em>Figure 2. Mass flow rates over a single mesh.</em>
 
@@ -230,7 +230,7 @@ $$
     % \label{eq:19}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})U_{P}\\
     = -(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
-        \textcolor{red}{-\{}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})]\}}
+        \textcolor{red}{-(}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})])}
 \end{split}
 \end{align}
 $$
@@ -241,7 +241,7 @@ $$
     % \label{eq:20}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})V_{P}\\
     = -(&P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
-    \textcolor{red}{-\{}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})]\}}
+    \textcolor{red}{-(}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})])}
 \end{split}
 \end{align}
 $$
@@ -252,14 +252,14 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:21}
-    U_{P} = \{-(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
-    -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})]\}\}\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2}) % \\
-    = \{-(&P_{i,j} - P_{i-1,j}) \delta y\\
+    U_{P} = (-(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
+    -(&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})]))\\
+    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2}) \\
+    = (-(&P_{i,j} - P_{i-1,j}) \delta y\\
     + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
-    -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]\}\}\\
+    -(&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]))\\
     \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
@@ -494,7 +494,7 @@ Notice that the schemes produce similar characteristics at low Reynolds numbers 
 
 </div>
 
-Overall, despite the deviation in values, the trend displays consistency. To better compare the resukts, the following figures are drawn.
+Overall, despite the deviation in values, the trend displays consistency. To better compare the results, the following figures are drawn.
 
 <table align="center">
   <tr>
