@@ -110,14 +110,18 @@ $$
 \end{split}
 \end{align}
 $$
+
 Then, integrate Equation (3) over a single mesh,
+
 $$
 \begin{align}
     % \label{eq:10}
     \int_{s}^{n} \int_{w}^{e} [\frac{\rho \partial UV}{\partial x} + \frac{\rho \partial VV}{\partial y} = -\frac{\partial P}{\partial y} + \mu_{Re}(\frac{\partial^{2} V}{\partial x^{2}} + \frac{\partial^{2} V}{\partial y^{2}})] dxdy
 \end{align}
 $$
+
 And then, we have the discretized momentum equation in the y-direction.
+
 $$
 \begin{align}
 \begin{split}
@@ -130,6 +134,7 @@ $$
 Given the lid velocity $U_{\Gamma^4} = 1 m/s$, the cavity height $L = 1 m$ and the selection of Reynolds number, considering the incompressible flow $\rho = 1 kg/m^3$, the corresponding viscosity $\mu_{Re}$ is determined by Equation 4: $\mu_{100} = 1 \times 10^{-2}$, $\mu_{1000} = 1 \times 10^{-3}$, $\mu_{5000} = 2 \times 10^{-4}$. Although these equations are seemingly simplified, the coupling of velocity and pressure is yet unresolved. I adopted staggered mesh thusly to circumvent this issue.
 
 Using the central differencing (CD) scheme to demonstrate the derivation of the SIMPLE algorithm. The mass flow rates for x-directional momentum conservation are
+
 $$
 \begin{align}
     % \label{eq:12}
@@ -141,7 +146,9 @@ $$
     \end{split}
 \end{align}
 $$
+
 And those in y-directional momentum conservation are
+
 $$
 \begin{align}
     % \label{eq:13}
@@ -153,14 +160,18 @@ $$
     \end{split}
 \end{align}
 $$
+
 The diffusive coefficients are all the same regardless of directions, $D_i = \frac{\mu \delta y_{i}}{\delta x_{i}}$, $i = e,w,n,s$. For homogeneous mesh, $\delta y_{i} = \delta x_{i}$, $i = e,w,n,s$,
+
 $$
 \begin{align}
     % \label{eq:14}
     D_e = D_w = D_n = D_s = \mu
 \end{align}
 $$
+
 The CD suggests that the pointal value $U_{i}$, $i = e,w,n,s$, is in the form of
+
 $$
 \begin{align}
     % \label{eq:15}
@@ -172,7 +183,9 @@ $$
     \end{split}
 \end{align}
 $$
+
 And the point value $V_{i}$, $i = e,w,n,s$ is in the form of
+
 $$
 \begin{align}
     % \label{eq:16}
@@ -184,7 +197,9 @@ $$
     \end{split}
 \end{align}
 $$
+
 Substitute Equation (15) in Equation (9), the x-directional momentum conservation is rewritten as
+
 $$
 \begin{align}
 \begin{split}
@@ -194,7 +209,9 @@ $$
 \end{split}
 \end{align}
 $$
+
 In the same way, substitute Equation (16) in Equation (11), the y-directional momentum conservation is rewritten as
+
 $$
 \begin{align}
 \begin{split}
@@ -204,7 +221,9 @@ $$
 \end{split}
 \end{align}
 $$
+
 Add the <font color="#ff0000">flux limiter</font> to Equations (17) and (18),
+
 $$
 \begin{align}
 \begin{split}
@@ -215,6 +234,7 @@ $$
 \end{split}
 \end{align}
 $$
+
 $$
 \begin{align}
 \begin{split}
@@ -225,7 +245,9 @@ $$
 \end{split}
 \end{align}
 $$
+
 Thus, the solutions
+
 $$
 \begin{align}
 \begin{split}
@@ -242,6 +264,7 @@ $$
 \end{split}
 \end{align}
 $$
+
 $$
 \begin{align}
 \begin{split}
@@ -258,6 +281,7 @@ $$
 \end{split}
 \end{align}
 $$
+
 where $\psi(r_{i}) = r_{i}$, $i=e,w,n,s$, for CD, and $r_{i} =(\phi_{D} - \phi_{C})/(\phi_{C} - \phi_{U} + \epsilon)$, in which $D$, $C$, $U$ signifies downwind, central, upwind point respectively. $\phi$ is the variable TBD, which is $U$ in x-directional momentum conservation, and $V$ in y-directional momentum conservation.
 
 Notice that the term, $\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}}$, does not satisfy Equation \ref{eq:1}, the continuity equation. Therefore, I introduced the SIMPLE method to couple the pressure and velocities.
@@ -291,7 +315,9 @@ $$
 \end{split}
 \end{align}
 $$
+
 where the corrected pressure term for the x-directional momentum equation is
+
 $$
 \begin{align}
 \begin{split}
@@ -302,7 +328,9 @@ $$
 \end{split}
 \end{align}
 $$
+
 and the corrected pressure term for the y-directional momentum equation is
+
 $$
 \begin{align}
 \begin{split}
