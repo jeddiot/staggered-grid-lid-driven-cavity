@@ -2,7 +2,7 @@
 
 ## I. Overview
 
-This repo is my 3rd take-home exercise submission of the course 11110PME511300 Computational Fluid Dynamics in 2022 Fall, lectured by [Prof. Chao-An Lin](https://scholar.google.com/citations?user=KHU451AAAAAJ&hl=en). I wrote the original report in LaTeX on 2023 Jan 11, and commited the files to GitHub on 2025 Aug 20.
+This repo is my 3rd assignment submission of the course 11110PME511300 Computational Fluid Dynamics in 2022 Fall, lectured by [Prof. Chao-An Lin](https://scholar.google.com/citations?user=KHU451AAAAAJ&hl=en). I wrote the original report in LaTeX on 2023 Jan 11, and commited the files to GitHub on 2025 Aug 20.
 
 ## II. Program structure and key files
 
@@ -92,6 +92,7 @@ $$
 </div>
 
 Integrate Equation (2) over a single mesh,
+
 $$
 \begin{align}
     % \label{eq:8}
@@ -128,7 +129,7 @@ $$
 
 Given the lid velocity $U_{\Gamma^4} = 1 m/s$, the cavity height $L = 1 m$ and the selection of Reynolds number, considering the incompressible flow $\rho = 1 kg/m^3$, the corresponding viscosity $\mu_{Re}$ is determined by Equation 4: $\mu_{100} = 1 \times 10^{-2}$, $\mu_{1000} = 1 \times 10^{-3}$, $\mu_{5000} = 2 \times 10^{-4}$. Although these equations are seemingly simplified, the coupling of velocity and pressure is yet unresolved. I adopted staggered mesh thusly to circumvent this issue.
 
-Using the CD (central differencing) scheme to demonstrate the derivation of the SIMPLE algorithm. The mass flow rates for x-directional momentum conservation are
+Using the central differencing (CD) scheme to demonstrate the derivation of the SIMPLE algorithm. The mass flow rates for x-directional momentum conservation are
 $$
 \begin{align}
     % \label{eq:12}
