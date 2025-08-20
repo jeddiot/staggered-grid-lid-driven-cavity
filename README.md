@@ -310,7 +310,7 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:25}
-    U_{P} = [-(&P_{i,j} - P_{i-1,j}) \delta y \textcolor{red}{ - (P'_{i,j} - P'_{i-1,j})\delta y}\\
+    U_{P} = [-(&P_{i,j} - P_{i-1,j}) \delta y - \textcolor{red}{(P'_{i,j} - P'_{i-1,j})\delta y}\\
 \end{split}
 \end{align}
 $$
