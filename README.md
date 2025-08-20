@@ -14,7 +14,7 @@ Consider the continuity equation in a 2D.
 
 <div align="center">
 
-  <img src="pics/others/domain.png" width="220" height="200">
+  <img src="pics/others/domain.png" width="300" height="270">
 
   <em>Figure 1. Domain.</em>
 
