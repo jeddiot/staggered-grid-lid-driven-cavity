@@ -277,9 +277,9 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:23}
-    V_{P} = \{-(&P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
-    -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})]\}\}\\
+    V_{P} = [-(&P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
+    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})]]]\\
     \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
@@ -289,10 +289,10 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:23}
-    \Rightarrow V_{P} = \{-(&P_{i,j} - P_{i,j-1}) \delta y\\
+    \Rightarrow V_{P} = [-(&P_{i,j} - P_{i,j-1}) \delta y\\
     + (&D_{e} - \frac{\dot{m_e}}{2})V_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})V_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})V_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})V_{i,j-1}\\
-    -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]\}\}\\
+    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]]]\\
     \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
@@ -310,10 +310,10 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:23}
-    U_{P} = \{-(&P_{i,j} - P_{i-1,j}) \delta y \textcolor{red}{ - (P'_{i,j} - P'_{i-1,j})\delta y}\\
+    U_{P} = [-(&P_{i,j} - P_{i-1,j}) \delta y \textcolor{red}{ - (P'_{i,j} - P'_{i-1,j})\delta y}\\
     + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
-    -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]\}\}\\
+    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]]]\\
     \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
@@ -323,10 +323,10 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:24}
-    V_{P} = \{-(&P_{i,j} - P_{i,j-1}) \delta y \textcolor{red}{ - (P'_{i,j} - P'_{i,j-1})\delta y}\\
+    V_{P} = [-(&P_{i,j} - P_{i,j-1}) \delta y \textcolor{red}{ - (P'_{i,j} - P'_{i,j-1})\delta y}\\
     + (&D_{e} - \frac{\dot{m_e}}{2})V_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})V_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})V_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})V_{i,j-1}\\
-    -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]\}\}\\
+    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]]]]\\
     \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
