@@ -6,7 +6,7 @@ This repo is my 3rd assignment submission of the course 11110PME511300 Computati
 
 ## II. Program structure and key files
 
-To run the program, just download the `CA3 2022.m` file and the `MAIN LIBRARY/` folder in the same directory, and you're good to go on MATLAB. **Do Not Change The Folder Name**, lest the path commands produce error warnings.
+To run the program, just download the `CA3_2022.m` file and the `MAIN LIBRARY/` folder in the same directory, and you're good to go on MATLAB. **Do Not Change The Folder Name**, lest the path commands produce error warnings.
 
 ## III. Problem description
 
@@ -230,7 +230,7 @@ $$
     % \label{eq:19}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})U_{P}\\
     = -(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
-        \textcolor{red}{-(}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})])}
+        \textcolor{red}{-\Bigl\{}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})]\Bigl\}}
 \end{split}
 \end{align}
 $$
@@ -241,7 +241,7 @@ $$
     % \label{eq:20}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})V_{P}\\
     = -(&P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
-    \textcolor{red}{-(}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})])}
+    \textcolor{red}{-\Bigl\{}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})]\Bigl\}}
 \end{split}
 \end{align}
 $$
@@ -255,12 +255,12 @@ $$
     U_{P} = \Bigl\{-(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
     -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})]\\
     + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})]\}\Bigl\}\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})\\
-    = \Bigl\{-(&P_{i,j} - P_{i-1,j}) \delta y\\
-    + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
-    -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]\}\Bigl\}\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2}) % \\
+    % = \Bigl\{-(&P_{i,j} - P_{i-1,j}) \delta y\\
+    % + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
+    % -\{&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
+    % + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]\}\Bigl\}\\
+    % \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
@@ -284,7 +284,7 @@ $$
 
 where $\psi(r_{i}) = r_{i}$, $i=e,w,n,s$, for CD, and $r_{i} =(\phi_{D} - \phi_{C})/(\phi_{C} - \phi_{U} + \epsilon)$, in which $D$, $C$, $U$ signifies downwind, central, upwind point respectively. $\phi$ is the variable TBD, which is $U$ in x-directional momentum conservation, and $V$ in y-directional momentum conservation.
 
-Notice that the term, $\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}}$, does not satisfy Equation \ref{eq:1}, the continuity equation. Therefore, I introduced the SIMPLE method to couple the pressure and velocities.
+Notice that the term, $\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}}$, does not satisfy Equation (1), the continuity equation. Therefore, I introduced the SIMPLE method to couple the pressure and velocities.
 
 ### 4.3 Introduction of The SIMPLE (Semi-Implicit Method for Pressure Linked Equations) Algorithm
 
