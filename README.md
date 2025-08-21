@@ -304,7 +304,7 @@ Notice that the term, $\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}}$, d
 
 ### 4.3 Introduction of The SIMPLE (Semi-Implicit Method for Pressure Linked Equations) Algorithm
 
-Add the correction terms to Equations (23) and (24) to satisfy Equation (1). By the SIMPLE algorithm, the correction terms are reduced to the <font color="#ff0000">corrected pressure term,</font> that is, $P'$.
+Add the correction terms to Equations (23) and (24) to satisfy Equation (1). By the SIMPLE algorithm, the correction terms are reduced to the corrected pressure term, that is, $(P^{'}_{i,j} - P^{'}_{i-1,j})\delta y$ term in $U_{P}$ and $(P'_{i,j} - P'_{i,j-1})\delta y$ in $V_{P}$.
 
 $$
 \begin{align}
