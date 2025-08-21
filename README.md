@@ -310,17 +310,17 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:25}
-    U_{P} = [-(&P_{i,j} - P_{i-1,j}) \delta y - (P'_{i,j} - P'_{i-1,j})\delta y\\
+    U_{P} = [-(P_{i,j} - P_{i-1,j}) \delta y - (P^{'}_{i,j} - P^{'}_{i-1,j})\delta y]
 \end{split}
 \end{align}
 $$
 
-$$
-% + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
-%     -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
-%     + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]]]\\
-%     \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
-$$
+<!-- $$
++ (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
+    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]]]\\
+    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+$$ -->
 
 $$
 \begin{align}
