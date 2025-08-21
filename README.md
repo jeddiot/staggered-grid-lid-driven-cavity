@@ -300,9 +300,9 @@ $$
 
 where $\psi(r_{i}) = r_{i}$, $i=e,w,n,s$, for CD, and $r_{i} =(\phi_{D} - \phi_{C})/(\phi_{C} - \phi_{U} + \epsilon)$, in which $D$, $C$, $U$ signifies downwind, central, upwind point respectively. $\phi$ is the variable TBD, which is $U$ in x-directional momentum conservation, and $V$ in y-directional momentum conservation.
 
-Notice that the term, $\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}}$, does not satisfy Equation (1), the continuity equation. Therefore, I introduced the SIMPLE method to couple the pressure and velocities.
+Notice that the term, $\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}}$, does not satisfy Equation (1), the continuity equation. Therefore, I introduced the Semi-Implicit Method for Pressure Linked Equations (SIMPLE) method to couple the pressure and velocities.
 
-### 4.3 Introduction of The SIMPLE (Semi-Implicit Method for Pressure Linked Equations) Algorithm
+<!-- ### 4.3 Introduction of The SIMPLE (Semi-Implicit Method for Pressure Linked Equations) Algorithm -->
 
 Add the correction terms to Equations (23) and (24) to satisfy Equation (1). By the SIMPLE algorithm, the correction terms are reduced to the <font color="#ff0000">corrected pressure term, $P^{'}$</font>.
 
@@ -310,7 +310,11 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:25}
-    U_{P} = [-(P_{i,j} - P_{i-1,j}) \delta y - (P^{'}_{i,j} - P^{'}_{i-1,j})\delta y]
+    U_{P} = [-(&P_{i,j} - P_{i-1,j}) \delta y - (P^{'}_{i,j} - P^{'}_{i-1,j})\delta y]\\
+    + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
+    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
+    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]]]\\
+    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
