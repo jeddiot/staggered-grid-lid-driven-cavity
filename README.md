@@ -205,7 +205,7 @@ $$
 \begin{split}
     % \label{eq:17}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})U_{P}\\
-    = -(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
+    = -&(P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
 \end{split}
 \end{align}
 $$
@@ -217,7 +217,7 @@ $$
 \begin{split}
     % \label{eq:18}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})V_{P}\\
-    = -(&P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
+    = -&(P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
 \end{split}
 \end{align}
 $$
@@ -229,8 +229,8 @@ $$
 \begin{split}
     % \label{eq:19}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})U_{P}\\
-    = -(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
-        \textcolor{red}{-(}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})])}
+    = -&(P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
+        \textcolor{red}{-} &\textcolor{red}{(}\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})])}
 \end{split}
 \end{align}
 $$
@@ -240,8 +240,8 @@ $$
 \begin{split}
     % \label{eq:20}
     &(D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})V_{P}\\
-    = -(&P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
-    \textcolor{red}{-(}&\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})])}
+    = -&(P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
+    \textcolor{red}{-} &\textcolor{red}{(}\textcolor{red}{\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})] + \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})])}
 \end{split}
 \end{align}
 $$
@@ -252,10 +252,10 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:21}
-    U_{P} = [-(&P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
-    - [&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})]]]\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+    U_{P} = [&-(P_{e} - P_{w}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})U_{E} + (D_{w} + \frac{\dot{m_w}}{2})U_{W} + (D_{n} - \frac{\dot{m_n}}{2})U_{N} + (D_{s} + \frac{\dot{m_s}}{2})U_{S}\\
+    &- [\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{E} - U_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{P} - U_{W})]\\
+    &+ \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{N} - U_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{P} - U_{S})]]]\\
+    &\div (D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
@@ -264,11 +264,11 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:22}
-    \Rightarrow U_{P} = (-(&P_{i,j} - P_{i-1,j}) \delta y\\
-    + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
-    -(&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]))\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+    \Rightarrow U_{P} = (&-(P_{i,j} - P_{i-1,j}) \delta y\\
+    &+ (D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
+    &-(\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
+    &+ \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]))\\
+    &\div (D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
@@ -277,10 +277,10 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:23}
-    V_{P} = [-(&P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
-    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})]]]\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+    V_{P} = [&-(P_{n} - P_{s}) \delta y + (D_{e} - \frac{\dot{m_e}}{2})V_{E} + (D_{w} + \frac{\dot{m_w}}{2})V_{W} + (D_{n} - \frac{\dot{m_n}}{2})V_{N} + (D_{s} + \frac{\dot{m_s}}{2})V_{S}\\
+    &-[\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{E} - V_{P})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{P} - V_{W})]\\
+    &+ \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{N} - V_{P})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{P} - V_{S})]]]\\
+    &\div (D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
@@ -289,11 +289,11 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:24}
-    \Rightarrow V_{P} = [-(&P_{i,j} - P_{i,j-1}) \delta y\\
-    + (&D_{e} - \frac{\dot{m_e}}{2})V_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})V_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})V_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})V_{i,j-1}\\
-    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]]]\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+    \Rightarrow V_{P} = [&-(P_{i,j} - P_{i,j-1}) \delta y\\
+    &+ (D_{e} - \frac{\dot{m_e}}{2})V_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})V_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})V_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})V_{i,j-1}\\
+    &-[\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
+    &+ \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]]]\\
+    &\div (D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
@@ -304,37 +304,30 @@ Notice that the term, $\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}}$, d
 
 ### 4.3 Introduction of The SIMPLE (Semi-Implicit Method for Pressure Linked Equations) Algorithm
 
-Add the correction terms to Equations (23) and (24) to satisfy Equation (1). By the SIMPLE algorithm, the correction terms are reduced to the corrected pressure term, that is, $(P^{'}_{i,j} - P^{'}_{i-1,j})\delta y$ term in $U_{P}$ and $(P'_{i,j} - P'_{i,j-1})\delta y$ in $V_{P}$.
+Add the correction terms to Equations (23) and (24) to satisfy Equation (1). By the SIMPLE algorithm, the correction terms are reduced to the corrected pressure term, that are, $(P^\prime_{i,j} - P^\prime_{i-1,j}) \delta y$ term in $U_{P}$ and $(P^\prime_{i,j} - P^\prime_{i,j-1})\delta y$ in $V_{P}$, respectively.
 
 $$
 \begin{align}
 \begin{split}
     % \label{eq:25}
-    U_{P} = [-(&P_{i,j} - P_{i-1,j}) \delta y - (P^{'}_{i,j} - P^{'}_{i-1,j})\delta y\\
-    + (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
-    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]]]\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+    U_{P} = [&-(P_{i,j} - P_{i-1,j}) \delta y - (P^\prime_{i,j} - P^\prime_{i-1,j})\delta y\\
+    &+ (D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
+    &-[\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
+    &+ \dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]]]\\
+    &\div (D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
-
-<!-- $$
-+ (&D_{e} - \frac{\dot{m_e}}{2})U_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})U_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})U_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})U_{i,j-1}\\
-    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(U_{i+1,j} - U_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(U_{i,j} - U_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(U_{i,j+1} - U_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(U_{i,j} - U_{i,j-1})]]]\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
-$$ -->
 
 $$
 \begin{align}
 \begin{split}
     % \label{eq:26}
-    V_{P} = [-(&P_{i,j} - P_{i,j-1}) \delta y \textcolor{red}{ - (P'_{i,j} - P'_{i,j-1})\delta y}\\
-    + (&D_{e} - \frac{\dot{m_e}}{2})V_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})V_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})V_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})V_{i,j-1}\\
-    -[&\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
-    + &\dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]]]\\
-    \div (&D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
+    V_{P} = [&-(P_{i,j} - P_{i,j-1}) \delta y \textcolor{red}{ - (P^\prime_{i,j} - P^\prime_{i,j-1})\delta y}\\
+    &+ (D_{e} - \frac{\dot{m_e}}{2})V_{i+1,j} + (D_{w} + \frac{\dot{m_w}}{2})V_{i-1,j} + (D_{n} - \frac{\dot{m_n}}{2})V_{i,j+1} + (D_{s} + \frac{\dot{m_s}}{2})V_{i,j-1}\\
+    &-[\dot{m_{e}}[\frac{\psi(r_{e})}{2}(V_{i+1,j} - V_{i,j})] - \dot{m_{w}}[\frac{\psi(r_{w})}{2}(V_{i,j} - V_{i-1,j})]\\
+    &+ \dot{m_{n}}[\frac{\psi(r_{n})}{2}(V_{i,j+1} - V_{i,j})] -\dot{m_{s}}[\frac{\psi(r_{s})}{2}(V_{i,j} - V_{i,j-1})]]]\\
+    &\div (D_{e} + D_{w} + D_{n} + D_{s} + \frac{\dot{m_e}}{2} - \frac{\dot{m_w}}{2} + \frac{\dot{m_n}}{2} - \frac{\dot{m_s}}{2})
 \end{split}
 \end{align}
 $$
@@ -345,9 +338,9 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:27}
-    &P'_{i,j} = \frac{\sum A_{C}P_{C} - \Delta \dot{m}^{*}}{A_{P}^{U}} = \frac{\sum A_{C}P_{C} - (\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}})}{A_{P}^{U}}\\
-    &P'_{i-1,j} = \frac{\sum A_{W}P_{W} - \Delta \dot{m}^{*}}{A_{P}^{U}} = \frac{\sum A_{C}P_{C} - (\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}})}{A_{P}^{U}}\\
-    &P'_{i,j-1} = \frac{\sum A_{S}P_{S} - \Delta \dot{m}^{*}}{A_{P}^{U}} = \frac{\sum A_{C}P_{C} - (\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}})}{A_{P}^{U}}
+    P^\prime_{i,j} &= \frac{\sum A_{C}P_{C} - \Delta \dot{m}^{\ast}}{A_{P}^{U}} = \frac{\sum A_{C}P_{C} - (\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}})}{A_{P}^{U}}\\
+    P^\prime_{i-1,j} &= \frac{\sum A_{W}P_{W} - \Delta \dot{m}^{\ast}}{A_{P}^{U}} = \frac{\sum A_{C}P_{C} - (\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}})}{A_{P}^{U}}\\
+    P^\prime_{i,j-1} &= \frac{\sum A_{S}P_{S} - \Delta \dot{m}^{\ast}}{A_{P}^{U}} = \frac{\sum A_{C}P_{C} - (\dot{m_{e}} - \dot{m_{w}} + \dot{m_{n}} - \dot{m_{s}})}{A_{P}^{U}}
 \end{split}
 \end{align}
 $$
@@ -358,9 +351,9 @@ $$
 \begin{align}
 \begin{split}
     % \label{eq:28}
-    &P'_{i,j} = \frac{\sum A_{C}P_{C} - \Delta \dot{m}^{*}}{A_{P}^{V}}\\
-    &P'_{i-1,j} = \frac{\sum A_{W}P_{W} - \Delta \dot{m}^{*}}{A_{P}^{V}}\\
-    &P'_{i,j-1} = \frac{\sum A_{S}P_{S} - \Delta \dot{m}^{*}}{A_{P}^{V}}
+    &P^\prime_{i,j} = \frac{\sum A_{C}P_{C} - \Delta \dot{m}^{\ast}}{A_{P}^{V}}\\
+    &P^\prime_{i-1,j} = \frac{\sum A_{W}P_{W} - \Delta \dot{m}^{\ast}}{A_{P}^{V}}\\
+    &P^\prime_{i,j-1} = \frac{\sum A_{S}P_{S} - \Delta \dot{m}^{\ast}}{A_{P}^{V}}
 \end{split}
 \end{align}
 $$
